@@ -42,7 +42,7 @@ app.post('/', (req, res) => {
 
         usuarioDB.password = ':)'; //Sirve para no mostrar la contraseña, solo mostrará ":)"
 
-        var token = jwt.sign({ usuario: usuarioDB }, SEED, { expiresIn: 14400 }); //14400 equivalen a 4Horas
+        var token = jwt.sign({ usuario: usuarioDB }, SEED, { expiresIn: 1440000 }); //14400 equivalen a 4Horas
 
 
         res.status(200).json({
